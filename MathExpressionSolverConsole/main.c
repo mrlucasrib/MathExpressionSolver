@@ -1,15 +1,13 @@
 #include <stdio.h>
-#include "../MathExpressionSolverLib/calculator.h"
 #include "../MathExpressionSolverLib/expression_tree.h"
 
 int main()
 {
-    ExpressionTree* etree =  parse_by_path(NULL);
+    ExpressionTree* etree =  parse_expr("5+5+4", 5);
 
-//    postfix_expression_tree(etree);
 
-    printf("Hello World!\n%f",evaluate(etree));
+    printf("Resultado: \n%f",evaluate(etree));
+//    save_as_dot(etree, "/home/lucas/isso.txt");
 
-    preOrdem_ArvBin(etree);
     return 0;
 }

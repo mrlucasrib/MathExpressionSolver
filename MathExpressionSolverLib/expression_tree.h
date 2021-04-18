@@ -10,4 +10,6 @@ float evaluate(ExpressionTree *);
 
 int save_as_dot(ExpressionTree *, char *filepath);
 
+void free_mem_expressiontree(ExpressionTree* etree);
+
 #endif // EXPRESSION_TREE_H

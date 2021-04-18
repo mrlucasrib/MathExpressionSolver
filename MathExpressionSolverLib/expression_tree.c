@@ -115,3 +115,11 @@ ExpressionTree *parse_expr(char *expr, int size) {
     parse(etree, expr, 0, size - 1);
     return etree;
 }
+
+void free_mem_expressiontree(ExpressionTree *etree) {
+    if (etree == NULL)
+        return;
+    free_mem_expressiontree(etree->left);
+    free_mem_expressiontree(etree->right);
+    free(etree);
+}

@@ -1,0 +1,26 @@
+# Instruções de instalação e utilização
+
+## Requisitos
+
+- Qt Creator
+- Qt 5.x+
+- cmake
+
+## Instalação
+
+Inicialmente, se estiver utilizando WINDOWS ou MACOS compile o programa localizado em OGDF/ e instale.
+- Para compilar deve-se habilitar a flag BUILD_SHARED_LIBS, no windows pode-se utilizar o cmake-gui
+- Após compilar coloque a biblioteca compartilhada (.dll no windos) na pasta OGDF/
+
+**DISCLAMER:** Fiz tudo que podia (serio perdi noite) tentando compilar esta biblioteca para o windows, mas cada hora surgia um problema diferente, então como falta pouco tempo optei por deixar apenas as instruçoes. Então recomendo fortemente utilizar o linux para rodar o programa.
+OBS: Ela é responsavel por transformar meu arquivo de descrição do grafo para uma figura SVG valida.
+
+Abra o projeto no Qt Creator e clique em compilar, existirá um executavel para o console e outro para a interface grafica.
+
+Obs: Inicialmente tentei criar um script de comandos de instalação e execução, porém, além de não ser algo trivial é muito dependente da plataforma
+e dos programas que o usuario tem instalado. E como o Qt é um requisito para a criação da UI e sugerido para o proprio trabalho pratico
+não é necessario deixar instruções detalhadas do processo.
+
+## Utilização
+
+O arquivo in.txt contem uma expressão valida para teste.

@@ -2,16 +2,44 @@
 #include <malloc.h>
 
 int NODE_ID = 0;
-struct Node {
+
+struct ExpressionTree {
+    /**
+     * @brief Valor do nó
+     */
     char value;
+    /**
+     * @brief ID unico de cada nó gerado automaticamente para produção da figura
+     * @private
+     */
     int ID;
-    struct Node *left, *right;
+    /**
+     * @brief Nós filhos
+     */
+    struct ExpressionTree *left, *right;
 };
 
+/**
+ * @brief Encontra o caractere com menor precedencia a partir de uma cadeia de caracteres
+ * @memberof ExpressionTree
+ * @return Retorna ao item de menor precedencia.
+ */
 int get_lower_precedence(ExpressionTree *etree, char *expr, int start, int end);
 
+/**
+ * @brief Atribui um valor de precedencia a partir do caractere
+ * @memberof ExpressionTree
+ * @param c Caractere a ser avaliado
+ * @return retorna um valor de 1 a 3 como a precedencia.
+ */
 int precedence(char c);
 
+/**
+ * @brief Função recursiva para fazer o parse da expressão
+ * @memberof ExpressionTree
+ * @param etree Arvore binaria a ser populada
+ * @return Retorna 1 se não existir problemas.
+ */
 int parse(ExpressionTree *etree, char *expr, int start, int end) {
     int position = get_lower_precedence(etree, expr, start, end);
     if (position != -1) {
@@ -75,6 +103,11 @@ float evaluate(ExpressionTree *etree) {
     }
 }
 
+/**
+ * @brief Cria a configuração inicial da linguagem de descrição de grafos
+ * @param etree
+ * @param f
+ */
 void generate_dot_config(ExpressionTree *etree, FILE *f) {
     if (etree == NULL)
         return;

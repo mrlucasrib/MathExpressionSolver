@@ -5,13 +5,13 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <ogdf/basic/GraphAttributes.h>
-#include <ogdf/basic/Graph_d.h>
-#include <ogdf/fileformats/GraphIO.h>
-#include <ogdf/layered/SugiyamaLayout.h>
-#include <ogdf/layered/OptimalRanking.h>
-#include <ogdf/layered/MedianHeuristic.h>
-#include <ogdf/layered/OptimalHierarchyLayout.h>
+#include "../OGDF/include/ogdf/basic/GraphAttributes.h"
+#include "../OGDF/include/ogdf/basic/Graph_d.h"
+#include "../OGDF/include/ogdf/fileformats/GraphIO.h"
+#include "../OGDF/include/ogdf/layered/SugiyamaLayout.h"
+#include "../OGDF/include/ogdf/layered/OptimalRanking.h"
+#include "../OGDF/include/ogdf/layered/MedianHeuristic.h"
+#include "../OGDF/include/ogdf/layered/OptimalHierarchyLayout.h"
 #include <QtSvgWidgets/QGraphicsSvgItem>
 
 extern "C" {
